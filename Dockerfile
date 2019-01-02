@@ -9,7 +9,7 @@ RUN npm run build
 
 # Nginx Base Image
 FROM nginx
-
+EXPOSE 80
 COPY --from=builder /app/build /usr/share/nginx/html
 
 # FROM node:10.13-alpine
